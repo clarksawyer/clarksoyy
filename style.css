@@ -1,0 +1,697 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    transition: 0.9s;
+}
+nav ul {
+    display: flex;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 10px 10px;
+    transition: 0.9s;
+    border-radius: 22px;
+    font-size: 18px;
+}
+.logo {
+    font-size: 43px;
+    font-weight: bold;
+    color: black;
+}
+nav ul li a.active {
+    background: black;
+    color: white;
+    border-radius: 22px;
+}
+nav ul li a:hover {
+    background: black;
+    color: white;
+    border-radius: 22px;
+}
+.hamburger {
+    display: none;
+}
+@media (max-width: 700px) {
+    .hamburger {
+        display: block;
+        margin-top: 10px;
+    }
+    .hamburger .line {
+        background: white;
+        width: 34px;
+        height: 3px;
+        margin: 6px 0;
+    }
+    nav {
+        position: absolute;
+        top: 80px;
+        background: gray;
+        left: 0;
+        right: 0;
+        height: 0;
+        overflow: hidden;
+        transition: 0.9s;
+    }
+    nav ul {
+        display: block;
+        width: 67%;
+        text-align: center;
+        opacity: 0;
+    }
+    nav ul li a {
+        margin-left: 120px;
+        text-align: center;
+        margin-top: 50px;
+        color: white;
+    }
+    nav ul li a.active {
+        background: white;
+        color: black;
+    }
+    nav ul li a:hover {
+        background: white;
+        color: black;
+    }
+    .logo {
+        font-size: 34px;
+        margin-top: 10px;
+    }
+    nav.active {
+        height: 600px;
+    }
+    nav.active ul {
+        opacity: 1;
+    }
+    header {
+        position: relative;
+        background: black;
+    }
+    header .logo {
+        color: white;
+    }
+}
+label {
+    position: absolute;
+    width: 60px;
+    height: 27px;
+    border-radius: 22px;
+    border: 2px solid none;
+    right: 20px;
+    top: 90px;
+    background: gray;
+    cursor: pointer;
+}
+label::before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 23px;
+    background: white;
+    top: 1px;
+    left: 3px;
+    border-radius: 50%;
+    transition: 0.9s;
+}
+label.actives:before {
+    left: 33px;
+}
+body.dark {
+    background: #000;
+    color: white;
+}
+body.dark .logo {
+    color: white;
+}
+body.dark nav ul li a {
+    color: white;
+}
+body.dark nav ul li a:hover {
+    background: white;
+    color: black;
+}
+body.dark nav ul li a.active {
+    background: white;
+    color: black;
+}
+body.dark .button a {
+    background: black;
+    color: white;
+    border: 2px solid white;
+}
+body.dark .button a:hover {
+    background: white;
+    color: black;
+}
+body.dark .security {
+    background: black;
+    color: white;
+    border: 2px solid white;
+}
+body.dark .hacker:hover {
+    background: white;
+    color: black;
+}
+body.dark .hacker {
+    background: black;
+    color: white;
+    border: 2px solid white;
+}
+body.dark .security:hover {
+    background: white;
+    color: black;
+}
+header.sticky {
+    background: black;
+}
+header.sticky .logo {
+    color: white;
+}
+header.sticky nav ul li a {
+    color: white;
+}
+header.sticky nav ul li a.active {
+    background: white;
+    color: black;
+}
+header.sticky nav ul li a:hover {
+    background: white;
+    color: black;
+}
+body.dark header.sticky {
+    background: white;
+}
+body.dark header.sticky .logo {
+    color: black;
+}
+body.dark header.sticky nav ul li a {
+    color: black;
+}
+body.dark header.sticky nav ul li a.active {
+    background: black;
+    color: white;
+}
+body.dark header.sticky nav ul li a:hover {
+    background: #000;
+    color: white;
+}
+body.dark .about-img-text p {
+    border: 2px solid white;
+    box-shadow: 0 0 2px 2px white;
+    background-color: gray;
+}
+@media (max-width: 700px) {
+    body.dark .hamburger .line {
+        background: black;
+    }
+    body.dark label {
+        border: 2px solid white;
+    }
+    label {
+        border: 2px solid black;
+        background: #000;
+    }
+    body.dark nav {
+        background: gray;
+    }
+    body.dark nav ul li a.active {
+        background: black;
+        color: white;
+    }
+    body.dark nav ul li a:hover {
+        background: black;
+        color: white;
+    }
+    body.dark nav ul li a {
+        color: black;
+    }
+    body.dark header {
+        background: white;
+    }
+    body.dark header .logo {
+        color: black;
+    }
+}
+.content h1 {
+    font-size: 26px;
+}
+span {
+    color: orangered;
+    font-size: 64px;
+}
+.button {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.button a {
+    padding: 20px 30px;
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+    transition: 0.9s;
+}
+.button a:hover {
+    background: black;
+    color: white;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.img-area img {
+    width: 370px;
+    height: auto;
+    margin-top: -20px;
+    margin-right: -190px;
+}
+.content {
+    margin-top: 160px;
+    margin-left: -120px;
+}
+@media (max-width: 700px) {
+    .img-area img {
+        width: 220px;
+        margin-left: -250px;
+        margin-top: 180px;
+    }
+    .content h1 {
+        font-size: 14px;
+    }
+    span {
+        font-size: 34px;
+    }
+    .content h4 {
+        font-size: 9px;
+    }
+    .button a {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+    .button {
+        margin-left: 10px;
+    }
+    .content {
+        margin-left: 1px;
+        margin-top: 60px;
+    }
+    body.dark .button a {
+        color: white;
+        background: black;
+        border: 2px solid white;
+    }
+    body.dark .button a:hover {
+        background: white;
+        color: black;
+        border: 2px solid white;
+    }
+    .container {
+        margin-top: 20px;
+    }
+}
+.services-text h2 {
+    text-align: center;
+    font-size: 35px;
+}
+.our {
+    margin-top: 20px;
+}
+.para p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 17px;
+    width: 70%;
+    line-height: 24px;
+}
+.para {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.services-main h2 {
+    margin-left: 60px;
+    font-size: 36px;
+    margin-top: 10px;
+}
+.services-main h3 {
+    font-size: 37px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.services-main img {
+    width: 350px;
+}
+.services-col {
+    display: flex;
+    justify-content: space-evenly;
+}
+.services-con {
+    margin-bottom: 20px;
+}
+@media (max-width: 700px) {
+    .services-text h2 {
+        font-size: 28px;
+    }
+    .para p {
+        font-size: 13px;
+        width: 100%;
+        margin-top: -10px;
+    }
+    .services-main img {
+        width: 200px;
+        margin-left: 73px;
+    }
+    .services-col {
+        flex-direction: column;
+    }
+    .services-main h3 {
+        font-size: 20px;
+        margin-left: 99px;
+    }
+    .services-main h2 {
+        font-size: 20px;
+        margin-left: 106px;
+    }
+}
+.hacker {
+    padding: 20px 30px;
+    margin-left: 60px;
+    font-size: 17px;
+    margin-top: 20px;
+    transition: 0.9s;
+    cursor: pointer;
+    border: 2px solid black;
+    background: transparent;
+}
+.hacker:hover {
+    background: #000;
+    color: white;
+    border: none;
+}
+.security {
+    padding: 20px 30px;
+    margin-left: 60px;
+    font-size: 17px;
+    margin-top: 20px;
+    transition: 0.9s;
+    cursor: pointer;
+    border: 2px solid black;
+    background: transparent;
+}
+.security:hover {
+    background: #000;
+    color: white;
+    border: none;
+}
+.hacker-answer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: 0.9s;
+    opacity: 0;
+}
+.hacker-answer.hackers {
+    opacity: 1;
+}
+.hacker-answer p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    font-size: 17px;
+    line-height: 26px;
+}
+.security-answer.securitys {
+    opacity: 1;
+}
+.security-answer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.9s;
+    opacity: 0;
+}
+.security-answer p {
+    width: 80%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 26px;
+}
+@media (max-width: 700px) {
+    .security-answer p {
+        font-size: 13px;
+        width: 100%;
+    }
+    .hacker-answer p {
+        font-size: 13px;
+        width: 100%;
+    }
+    .hacker {
+        padding: 10px 10px;
+        margin-left: 76px;
+    }
+    .security {
+        padding: 10px 10px;
+        margin-left: 76px;
+    }
+}
+.section-outro {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+.section-outro i {
+    margin: 0 20px;
+}
+.sigma-coders {
+    text-align: center;
+    margin: 20px 0;
+}
+.sigma-coders p {
+    font-size: 13px;
+}
+@media (max-width: 700px) {
+    .section-outro {
+        font-size: 23px;
+    }
+    .sigma-coders p {
+        font-size: 0.6rem;
+    }
+}
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-text {
+    margin-top: 110px;
+}
+.about-text h2 {
+    font-size: 44px;
+}
+.about-clark p {
+    width: 80%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+}
+.about-clark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.about-img-text p {
+    width: 90%;
+    text-align: left;
+    margin-top: 130px;
+    margin-left: 20px;
+    font-size: 19px;
+    line-height: 30px;
+    border: 2px solid black;
+    padding: 20px 30px;
+    border-radius: 22px;
+    outline: none;
+}
+.about-img-col {
+    display: flex;
+    justify-content: space-evenly;
+}
+.about-img-col img {
+    width: 400px;
+    margin-left: 100px;
+}
+@media (max-width: 700px) {
+    .about-clark p {
+        font-size: 14px;
+        width: 90%;
+    }
+    .about-text h2 {
+        font-size: 28px;
+    }
+    .about-img-col {
+        flex-direction: column;
+    }
+    .about-img-col img {
+        width: 350px;
+        margin-left: -1px;
+    }
+    .about-img-text p {
+        font-size: 15px;
+        width: 100%;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        margin-top: -10px;
+        margin-left: -1px;
+        text-align: center;
+    }
+    body.dark .about-img-text p {
+        border: none;
+        outline: none;
+        box-shadow: none;
+        background: none;
+    }
+}
+.skills-text {
+    margin-top: 120px;
+}
+.skills-text h2 {
+    font-size: 50px;
+}
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills-img-text p {
+    width: 100%;
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 10px;
+}
+.skills-img-text {
+    margin-right: 30px;
+    margin-left: 20px;
+}
+.skills-img {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+.skills-img img {
+    width: 200px;
+}
+.skills-content {
+    margin-top: 20px;
+}
+@media (max-width: 700px) {
+    .skills-text h2 {
+        font-size: 37px;
+    }
+    .skills-img {
+        flex-direction: column;
+    }
+    .skills-img img {
+        display: none;
+    }
+    .skills-img-text p {
+        font-size: 15px;
+    }
+}
+.contact-text {
+    margin-top: 120px;
+}
+.contact-text h2 {
+    font-size: 44px;
+}
+.contact {
+    display: flex;
+    justify-content: center;
+}
+.contact-content-col {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+form input, textarea {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 19px;
+    background: transparent;
+}
+form input {
+    height: 60px;
+    margin: 10px 0;
+}
+form textarea {
+    border: 2px solid black;
+}
+body.dark form input {
+    color: white;
+    border: 2px solid white;
+}
+body.dark form textarea {
+    border: 2px solid white;
+}
+body.dark form textarea::placeholder {
+    color: white;
+}
+body.dark form input::placeholder {
+    color: white;
+}
+.submit {
+    padding: 20px 70px;
+    font-size: 20px;
+    background: transparent;
+    transition: 0.9s;
+}
+.submit:hover {
+    background: black;
+    color: white;
+}
+body.dark .submit {
+    background: black;
+    color: white;
+    border: 2px solid white;
+}
+body.dark .submit:hover {
+    background: white;
+    color: black;
+}
+@media (max-width: 700px) {
+    form input, textarea {
+        width: 90%;
+        font-size: 14px;
+        margin-left: 16px;
+    }
+    .submit {
+        padding: 10px 30px;
+        font-size: 13px;
+        margin-left: 16px;
+    }
+}
+.software {
+    height: 353px;
+}
